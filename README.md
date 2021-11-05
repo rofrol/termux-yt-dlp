@@ -30,7 +30,7 @@ Open Termux and run
 ## How to use
 
 1. Now go into youtube (or twitter, or reddit, [full list](https://ytdl-org.github.io/youtube-dl/supportedsites.html)), watch a video, tap the share button, then tap termux and wait for the download.
-2. Go into `~/storage/shared/downloads/` with your file explorer and watch your downloaded video.
+2. Go into `~/storage/shared/Download/` with your file explorer and watch your downloaded video.
 
 ## TODO
 
