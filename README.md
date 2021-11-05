@@ -21,6 +21,12 @@ $ bash install.sh
 - `Long press Termux icon > i > Other permissions > Display pop-up window`
 - or `Settings > Apps > Manage Apps > Termux > Other permissions > Display pop-up window`.
 
+## Upgrade yt-dlp
+
+Open Termux and run
+
+`pip install -U yt-dlp`
+
 ## How to use
 
 1. Now go into youtube (or twitter, or reddit, [full list](https://ytdl-org.github.io/youtube-dl/supportedsites.html)), watch a video, tap the share button, then tap termux and wait for the download.
