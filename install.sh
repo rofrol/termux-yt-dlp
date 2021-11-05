@@ -18,8 +18,9 @@ termux-setup-storage
 sleep 2
 pkg update
 pkg install python ffmpeg
-pip install wheel
-pip install yt-dlp
+pip install -U pip
+pip install -U wheel
+pip install -U yt-dlp
 mkdir -p $TERMUXURLOPENER_CONFIG_FOLDER
 cp -r yt-dlp ~/.config/
 cp termux-url-opener "${TERMUXURLOPENER_CONFIG_FOLDER}/"
