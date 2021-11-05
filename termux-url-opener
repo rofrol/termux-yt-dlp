@@ -1,7 +1,7 @@
 #!/bin/bash
 clear
 
-PLAYLIST="%(extractor)s/playlists/%(playlist_title)s_%(playlist_id)s/%(playlist_index)s - %(uploader)s_%(channel_id)s - %(title)s [%(id)s].%(ext)s"
+PLAYLIST="%(extractor)s/playlists/%(playlist_title)s_%(playlist_id)s/%(n_entries-playlist_index)d - %(uploader)s_%(channel_id)s - %(title)s [%(id)s].%(ext)s"
 CHANNEL="%(extractor)s/%(uploader)s_%(channel_id)s/%(title)s [%(id)s].%(ext)s"
 
 if [[ "$1" =~ ^.*youtu.*$ ]] || [[ "$1" =~ ^.*youtube.*$ ]]; then
