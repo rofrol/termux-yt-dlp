@@ -4,8 +4,7 @@ set -euo pipefail
 BLUE='\e[34m'
 NC='\e[0m'
 WORKING_DIR=$(echo $(pwd))
-YOUTUBEDL_OUTPUT_FOLDER="${WORKING_DIR}/storage/shared/downloads"
-YOUTUBEDL_CONFIG_FOLDER="${WORKING_DIR}/.config/yt-dlp/"
+YTDLP_CONFIG_FOLDER="${WORKING_DIR}/.config/yt-dlp/"
 TERMUXURLOPENER_CONFIG_FOLDER="${WORKING_DIR}/bin/"
 
 echo "Hi, This script setup an environment to download various videos from various apps"
@@ -22,12 +21,9 @@ pkg update
 pkg install python ffmpeg
 pip install wheel
 pip install yt-dlp
-mkdir -p $YOUTUBEDL_OUTPUT_FOLDER
-mkdir -p $YOUTUBEDL_CONFIG_FOLDER
 mkdir -p $TERMUXURLOPENER_CONFIG_FOLDER
-# Download setup & config file
-curl -L https://raw.githubusercontent.com/OzakIOne/termux-youtube-dl/v1.0.2/.ytdl.conf > "${YOUTUBEDL_CONFIG_FOLDER}/config"
-curl -L https://raw.githubusercontent.com/OzakIOne/termux-youtube-dl/v1.0.2/share2youtubedl.sh > "${TERMUXURLOPENER_CONFIG_FOLDER}/termux-url-opener"
+cp -r yt-dlp ~/.config/
+curl -L termux-url-opener "${TERMUXURLOPENER_CONFIG_FOLDER}/"
 
 echo -e "${BLUE}Congratulations!!! Your setup is complete.\n\n"
 read -p "When you are ready just press enter"
