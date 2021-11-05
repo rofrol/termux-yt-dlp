@@ -1,9 +1,18 @@
 #!/bin/bash
 clear
 
+CHANNEL="%(extractor)s/%(uploader)s_%(channel_id)s/%(title)s [%(id)s].%(ext)s"
+PLAYLIST="%(extractor)s/%(uploader)s_%(channel_id)s/%(playlist)s/%(playlist_index)s - %(title)s [%(id)s].%(ext)s"
+
 if [[ "$1" =~ ^.*youtu.*$ ]] || [[ "$1" =~ ^.*youtube.*$ ]]; then
     echo -e "Downloading video...\\n>URL: ${1}\\n"
-    yt-dlp -F "$1"
+    # https://askubuntu.com/questions/1154906/youtube-dl-use-different-output-format-if-downloading-a-playlist
+    if [[ "$1" =~ .*/playlist.* ]]; then
+      opt="$PLAYLIST"
+    else
+      opt="$CHANNEL"
+    fi
+    #yt-dlp -F "$1"
     #read -p "Choose your video quality (press enter for: 'best') : " video
     #read -p "Choose your audio quality (press enter for: 'best') : " audio
     if [[ "$video" = "" ]]; then
@@ -12,7 +21,8 @@ if [[ "$1" =~ ^.*youtu.*$ ]] || [[ "$1" =~ ^.*youtube.*$ ]]; then
     if [[ "$audio" = "" ]]; then
         audio="best"
     fi
-    yt-dlp -f "$video"+"$audio" "$1"
+    # yt-dlp -f "$video"+"$audio" "$1"
+    yt-dlp -o "$opt" "$1"
     elif [[ "$1" =~ ^.*nourlselected.*$ ]]; then
     echo "There was an error"
 else yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' "$1"

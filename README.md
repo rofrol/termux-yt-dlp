@@ -34,4 +34,4 @@ Open Termux and run
 
 ## TODO
 
-- [ ] If there is no playlist it saves in NA directory with NA prefix in file name
+- [x] If there is no playlist it saves in NA directory with NA prefix in file name

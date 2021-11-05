@@ -11,5 +11,5 @@
 --merge-output-format mkv
 --sponsorblock-remove sponsor,selfpromo,interaction
 --no-mtime
--P "~/storage/shared/downloads/"
+-P "~/storage/shared/Download/"
 -o "%(extractor)s/%(uploader)s/%(playlist)s/%(playlist_index)s - %(title)s [%(id)s].%(ext)s"
