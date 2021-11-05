@@ -3,9 +3,8 @@ set -euo pipefail
 
 BLUE='\e[34m'
 NC='\e[0m'
-WORKING_DIR=$(echo $(pwd))
-YTDLP_CONFIG_FOLDER="${WORKING_DIR}/.config/yt-dlp/"
-TERMUXURLOPENER_CONFIG_FOLDER="${WORKING_DIR}/bin/"
+YTDLP_CONFIG_FOLDER="${HOME}/.config/yt-dlp/"
+TERMUXURLOPENER_CONFIG_FOLDER="${HOME}/bin/"
 
 echo "Hi, This script setup an environment to download various videos from various apps"
 sleep 1
@@ -23,7 +22,7 @@ pip install wheel
 pip install yt-dlp
 mkdir -p $TERMUXURLOPENER_CONFIG_FOLDER
 cp -r yt-dlp ~/.config/
-curl -L termux-url-opener "${TERMUXURLOPENER_CONFIG_FOLDER}/"
+cp termux-url-opener "${TERMUXURLOPENER_CONFIG_FOLDER}/"
 
 echo -e "${BLUE}Congratulations!!! Your setup is complete.\n\n"
 read -p "When you are ready just press enter"
