@@ -35,3 +35,4 @@ Open Termux and run
 ## TODO
 
 - [x] If there is no playlist it saves in NA directory with NA prefix in file name
+- [ ] Use `--no-abort-on-error` and `--skip-playlist-after-errors N`
