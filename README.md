@@ -1,10 +1,14 @@
 # termux-yt-dlp
 
-Bash script to setup yt-dlp in termux
+Bash script to setup yt-dlp in Termux
 
 ## How to install
 
 1. Install Termux from F-Droid repository https://f-droid.org/en/packages/com.termux/. Termux from Google Play has problems with `pkg update` and will be removed in the future.
+
+- https://github.com/termux/termux-app/issues/2067
+- https://stackoverflow.com/questions/67647518/i-want-to-ask-how-to-fix-this-termux-repository/68881710#68881710
+
 2. Open termux
 
 ```bash
