@@ -2,7 +2,7 @@
 clear
 
 CHANNEL="%(extractor)s/%(uploader)s_%(channel_id)s/%(title)s [%(id)s].%(ext)s"
-PLAYLIST="%(extractor)s/playlists/%(playlist)s/%(playlist_index)s - %(uploader)s_%(channel_id)s - %(title)s [%(id)s].%(ext)s"
+PLAYLIST="%(extractor)s/playlists/%(playlist_uploader)s_%(playlist_uploader_id)s/%(playlist)s/%(playlist_index)s - %(uploader)s_%(channel_id)s - %(title)s [%(id)s].%(ext)s"
 
 if [[ "$1" =~ ^.*youtu.*$ ]] || [[ "$1" =~ ^.*youtube.*$ ]]; then
     echo -e "Downloading video...\\n>URL: ${1}\\n"
