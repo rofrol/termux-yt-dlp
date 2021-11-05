@@ -16,12 +16,10 @@ $ cd termux-yt-dlp
 $ bash install.sh
 ```
 
-3. Enable Termux popup over other applications:
+3. Enable Termux [popup over other applications](https://bubble.dynalogix.eu/enable-display-pop-up-windows-on-new-xiaomi-phones/):
 
 - `Long press Termux icon > i > Other permissions > Display pop-up window`
 - or `Settings > Apps > Manage Apps > Termux > Other permissions > Display pop-up window`.
-
-https://bubble.dynalogix.eu/enable-display-pop-up-windows-on-new-xiaomi-phones/
 
 ## How to use
 
