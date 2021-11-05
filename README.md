@@ -31,3 +31,7 @@ Open Termux and run
 
 1. Now go into youtube (or twitter, or reddit, [full list](https://ytdl-org.github.io/youtube-dl/supportedsites.html)), watch a video, tap the share button, then tap termux and wait for the download.
 2. Go into `~/storage/shared/downloads/` with your file explorer and watch your downloaded video.
+
+## TODO
+
+- [ ] If there is no playlist it saves in NA directory with NA prefix in file name
