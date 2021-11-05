@@ -1,16 +1,18 @@
 #!/bin/bash
 clear
 
+PLAYLIST="%(extractor)s/playlists/%(playlist_title)s_%(playlist_id)s/%(playlist_index)s - %(uploader)s_%(channel_id)s - %(title)s [%(id)s].%(ext)s"
 CHANNEL="%(extractor)s/%(uploader)s_%(channel_id)s/%(title)s [%(id)s].%(ext)s"
-PLAYLIST="%(extractor)s/playlists/%(playlist_uploader)s_%(playlist_uploader_id)s/%(playlist)s/%(playlist_index)s - %(uploader)s_%(channel_id)s - %(title)s [%(id)s].%(ext)s"
 
 if [[ "$1" =~ ^.*youtu.*$ ]] || [[ "$1" =~ ^.*youtube.*$ ]]; then
     echo -e "Downloading video...\\n>URL: ${1}\\n"
     # https://askubuntu.com/questions/1154906/youtube-dl-use-different-output-format-if-downloading-a-playlist
-    if [[ "$1" =~ .*/playlist.* ]]; then
+    if [[ "$1" =~ .*/playlist.* ]] || [[ "$1" =~ .*list=.* ]]; then
       opt="$PLAYLIST"
+      echo "PLAYLIST"
     else
       opt="$CHANNEL"
+      echo "CHANNEL"
     fi
     #yt-dlp -F "$1"
     #read -p "Choose your video quality (press enter for: 'best') : " video
