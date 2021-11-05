@@ -4,7 +4,7 @@ Bash script to setup yt-dlp in Termux
 
 ## How to install
 
-1. Install [Termux from F-Droid](https://f-droid.org/en/packages/com.termux/) repository. Termux from Google Play [has](https://github.com/termux/termux-app/issues/2067) [problems](https://stackoverflow.com/questions/67647518/i-want-to-ask-how-to-fix-this-termux-repository/68881710#68881710) with `pkg update` and will be removed in the future.
+1. Install [Termux from F-Droid](https://wiki.termux.com/wiki/Installing_from_F-Droid). Termux from Google Play [has](https://github.com/termux/termux-app/issues/2067) [some](https://www.reddit.com/r/termux/comments/msn5rr/pkg_update_fails/) [problems](https://stackoverflow.com/questions/67647518/i-want-to-ask-how-to-fix-this-termux-repository/68881710#68881710) with `pkg update` and will be removed in the future. You don't need root to install F-Droid application. Just allow installing from apk file.
 
 2. Open termux
 
