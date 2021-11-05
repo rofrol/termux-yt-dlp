@@ -1,7 +1,7 @@
 #!/bin/bash
 clear
 
-PLAYLIST="%(extractor)s/playlists/%(playlist_title)s_%(playlist_id)s/%(n_entries-playlist_index)d - %(uploader)s_%(channel_id)s - %(title)s [%(id)s].%(ext)s"
+PLAYLIST="%(extractor)s/playlists/%(playlist_title)s_%(playlist_id)s/%(n_entries-playlist_index)03d - %(uploader)s_%(channel_id)s - %(title)s [%(id)s].%(ext)s"
 CHANNEL="%(extractor)s/%(uploader)s_%(channel_id)s/%(title)s [%(id)s].%(ext)s"
 
 if [[ "$1" =~ ^.*youtu.*$ ]] || [[ "$1" =~ ^.*youtube.*$ ]]; then
@@ -25,7 +25,7 @@ if [[ "$1" =~ ^.*youtu.*$ ]] || [[ "$1" =~ ^.*youtube.*$ ]]; then
     fi
     # yt-dlp -f "$video"+"$audio" "$1"
     yt-dlp -o "$opt" "$1"
-    elif [[ "$1" =~ ^.*nourlselected.*$ ]]; then
+elif [[ "$1" =~ ^.*nourlselected.*$ ]]; then
     echo "There was an error"
 else yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' "$1"
 fi
