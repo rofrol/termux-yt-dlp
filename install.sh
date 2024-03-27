@@ -18,7 +18,6 @@ termux-setup-storage
 sleep 2
 pkg update
 pkg install python ffmpeg
-pip install -U pip
 pip install -U wheel
 pip install -U yt-dlp
 mkdir -p $TERMUXURLOPENER_CONFIG_FOLDER
